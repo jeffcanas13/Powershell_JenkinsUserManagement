@@ -4,19 +4,19 @@ function Main-Menu
     do
     {
         Write-Host "========================================="
-		Write-Host "     Jenkins User Management Utility     "
-		Write-Host "       Created by: JCANAS3 Oct2017       "
-		Write-Host "========================================="
-		Write-Host "            *** MAIN MENU ***            "
-		Write-Host "Executed By: $userlog @ $timelog         "
-		Write-Host "========================================="
-		Write-Host "1. Remove User Utility `n2. ADD User Utility `n3. Exit "
+	Write-Host "     Jenkins User Management Utility     "
+	Write-Host "       Created by: JCANAS3 Oct2017       "
+	Write-Host "========================================="
+	Write-Host "            *** MAIN MENU ***            "
+	Write-Host "Executed By: $userlog @ $timelog         "
+	Write-Host "========================================="
+	Write-Host "1. Remove User Utility `n2. ADD User Utility `n3. Exit "
         $input = read-host [Enter Selection]
-			IF([string]::IsNullOrWhiteSpace($input)) {            
-			Write-Host "Invalid Blank Input!!!"            
-			} else {            
-			Write-Host "Invalid Input!!!"  } 
-		Switch ($input) {
+		IF([string]::IsNullOrWhiteSpace($input)) {            
+		Write-Host "Invalid Blank Input!!!"            
+		} else {            
+		Write-Host "Invalid Input!!!"  } 
+	Switch ($input) {
             "1" {clear;rem-client}
             "2" {clear;add-client}
             "3" {clear;Exit}
@@ -34,12 +34,12 @@ function rem-client
         Write-Host "REMOVE User Utility Client MENU"
 		Write-Host "1. MEMIC `n2. SwissRE `n3. Return to Main Menu"
         $input = read-host [Enter Selection]
-			IF([string]::IsNullOrWhiteSpace($input)) {            
-			Write-Host "Invalid Blank Input!!!"            
-			} else {            
-			Write-Host "Invalid Input!!!" }
+		IF([string]::IsNullOrWhiteSpace($input)) {            
+		Write-Host "Invalid Blank Input!!!"            
+		} else {            
+		Write-Host "Invalid Input!!!" }
 			
-		Switch ($input) {
+	Switch ($input) {
             "1" {clear;rem-mem-menu}
             "2" {clear;rem-sre-menu}
             "3" {clear;Main-Menu}
@@ -55,7 +55,7 @@ function add-client
     do
     {
         Write-Host "ADD Utility MENU"
-		Write-Host "1. Memic `n2. SwissRE `n3. Return to Main Menu"
+	Write-Host "1. Memic `n2. SwissRE `n3. Return to Main Menu"
         $input = read-host [Enter Selection]
         Switch ($input) {
             "1" {clear;addrole-mem-menu}
@@ -73,18 +73,18 @@ function rem-mem-menu
     do
     {
         Write-Host "REMOVE User Utility for MEMIC MENU"
-		Write-Host "1. All MEMIC Jobs `n2. <#MEMIC PRD Jobs `n3. MEMIC STG Jobs`n4. MEMIC UAT Jobs`n5.#> Back to Previous Menu"
+	Write-Host "1. All MEMIC Jobs `n2. <#MEMIC PRD Jobs `n3. MEMIC STG Jobs`n4. MEMIC UAT Jobs`n5.#> Back to Previous Menu"
         $input = read-host [Enter Selection]
-			IF([string]::IsNullOrWhiteSpace($input)) {            
-			Write-Host "Invalid Blank Input!!!"            
-			} else {            
-			Write-Host "Invalid Input!!!" }
+		IF([string]::IsNullOrWhiteSpace($input)) {            
+		Write-Host "Invalid Blank Input!!!"            
+		} else {            
+		Write-Host "Invalid Input!!!" }
 			
-		Switch ($input) {
+	Switch ($input) {
             "1" {clear;rem-mem_all-job}
             "2" {clear;rem-mem_prd-job}
-			"3" {clear;rem-mem_stg-job}
-			"4" {clear;rem-mem_uat-job}
+	    "3" {clear;rem-mem_stg-job}
+	    "4" {clear;rem-mem_uat-job}
             "5" {clear;rem-client}
         }
     }
@@ -96,18 +96,18 @@ function rem-sre-menu
     do
     {
         Write-Host "REMOVE User Utility for SWISSRE MENU"
-		Write-Host "1. All SWISSRE Jobs `n2. SWISSRE PRD Jobs `n3. SWISSRE STG Jobs`n4. SWISSRE UAT Jobs`n5. Return to Previous Menu"
+	Write-Host "1. All SWISSRE Jobs `n2. SWISSRE PRD Jobs `n3. SWISSRE STG Jobs`n4. SWISSRE UAT Jobs`n5. Return to Previous Menu"
         $input = read-host [Enter Selection]
-			IF([string]::IsNullOrWhiteSpace($input)) {            
-			Write-Host "Invalid Blank Input!!!"            
-			} else {            
-			Write-Host "Invalid Input!!!" }
+		IF([string]::IsNullOrWhiteSpace($input)) {            
+		Write-Host "Invalid Blank Input!!!"            
+		} else {            
+		Write-Host "Invalid Input!!!" }
 			
-		Switch ($input) {
+	Switch ($input) {
             "1" {clear;rem-sre_all-menu}
             "2" {clear;rem-sre_prd-menu}
-			"3" {clear;rem-sre_stg-menu}
-			"4" {clear;rem-sre_uat-menu}
+	    "3" {clear;rem-sre_stg-menu}
+	    "4" {clear;rem-sre_uat-menu}
             "5" {clear;rem-client}
         }
     }
